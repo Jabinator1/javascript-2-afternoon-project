@@ -28,11 +28,13 @@
 */
 
 // Code Here 
+let first = (array, callback) => {
 
+}
 // Do not edit the code below.
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
 
-first(names, function(firstName){
+first(names, function(firstName, callback){
   console.log('The first name in names is ' + firstName);
   return firstName;
 });

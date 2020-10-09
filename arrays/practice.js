@@ -18,7 +18,7 @@ var arr = [10,20,30];
 */
 
 //Code Here
-
+let first = arr => arr[0]
 
 
 ////////// PROBLEM 2 //////////
@@ -33,7 +33,7 @@ var arr = [40,50,60];
 */
 
 //Code Here
-
+let last = arr => arr[2]
 
 
 ////////// PROBLEM 3 //////////
@@ -48,7 +48,11 @@ var family = ['Tyler', 'Jordyn', 'Ryan', 'Chelsey', 'Ireland'];
 */
 
 //Code Here
-
+let looper = family => {
+  for (i of family) {
+    alert(i)
+  }
+}
 
 
 ////////// PROBLEM 4 //////////
@@ -63,9 +67,13 @@ var letters = ['A', 'B', 'C', 'D', 'E'];
 */
 
 //Code Here
+let reversedLooper = letters => {
+  for (i of letters.reverse()) {
+    alert(i)
+  }
+}
 
-
-
+console.log(reversedLooper)
 ////////// PROBLEM 5 //////////
 
 // Do not edit the code below.
@@ -78,21 +86,19 @@ var nums = [1,2,3,6,22,98,45,23,22,12];
 */
 
 //Code Here
+let evenFinder = nums => {
 
-
-
-
-
-
+  let arr = []
+  for (num of nums) {
+    if (num % 2 === 0) {
+      arr.push(num)
+    }
+  }
+  return arr
+}
 
 /////////////////////// EXTRA PRACTICE PROBLEMS BELOW ////////////////////
 ////////// MOVE ONTO NEXT SECTION BEFORE WORKING ON THESE ////////////////
-
-
-
-
-
-
 
 ////////// PROBLEM 6 //////////
 
@@ -107,8 +113,22 @@ var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
 */
 
 //Code Here
+let divider = numbersArray => {
 
+  let evensArr = []
+  let oddsArr = []
 
+  let arr = [
+    evensArr,
+    oddsArr,
+  ]
+  for (num of numbersArray) {
+    num % 2 === 0 ? evensArr.push(num)
+    : oddsArr.push(num)
+  }
+
+  return arr
+}
 
 ////////// PROBLEM 7 //////////
 
@@ -118,8 +138,9 @@ var getRandomArbitrary = function() {
 };
 // Do not edit the code above.
 
-/* 
+
   var numbers = [0,3,4,5,6,7,9,14,17,24,25,26,29,30];
+/*
   Above you're given a function (getRandomArbitrary) that will return a random number between 0 and 30.
   There is also a commented out array full of numbers to help you visualize what your function will be receiving.
   Write a function named finder that will take in an array as an argument.
@@ -129,8 +150,15 @@ var getRandomArbitrary = function() {
 */
 
 //Code Here
-
-
+let finder = arr => {
+  let randomNumber = getRandomArbitrary()
+  for (num of arr) {
+    if (num === randomNumber) {
+      return true
+    }
+  }
+  return false
+}
 
 ////////// PROBLEM 8 //////////
 
@@ -158,9 +186,18 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 */
 
 //Code Here
+function removeItem(myGroceryList, removeItem) {
+  for (item of myGroceryList) {
+    if (item === removeItem) {
+      myGroceryList.filter(item)
+      return myGroceryList
+    }
+  }
+}
 
-
-
+function addItem(myGroceryList, addItem) {
+  myGroceryList.push(addItem)
+}
 ////////// PROBLEM 9 //////////
 
 /*
