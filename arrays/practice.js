@@ -118,16 +118,12 @@ let divider = numbersArray => {
   let evensArr = []
   let oddsArr = []
 
-  let arr = [
-    evensArr,
-    oddsArr,
-  ]
   for (num of numbersArray) {
     num % 2 === 0 ? evensArr.push(num)
     : oddsArr.push(num)
   }
 
-  return arr
+  return [ evensArr, oddsArr ]
 }
 
 ////////// PROBLEM 7 //////////
@@ -205,7 +201,11 @@ function addItem(myGroceryList, addItem) {
 */
 
 //Code Here
+function maker() {
+  let arr = []
 
+  
+}
 
 
 ////////// PROBLEM 10 //////////
