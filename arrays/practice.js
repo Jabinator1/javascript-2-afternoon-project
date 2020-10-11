@@ -67,13 +67,13 @@ var letters = ['A', 'B', 'C', 'D', 'E'];
 */
 
 //Code Here
-let reversedLooper = letters => {
-  for (i of letters.reverse()) {
-    alert(i)
+let reversedLooper = arr => {
+  for (i = arr.length - 1; i > -1; i--) {
+    alert(arr[i])
   }
 }
 
-console.log(reversedLooper)
+console.log(reversedLooper(letters))
 ////////// PROBLEM 5 //////////
 
 // Do not edit the code below.
@@ -182,17 +182,24 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 */
 
 //Code Here
-function removeItem(myGroceryList, removeItem) {
-  for (item of myGroceryList) {
-    if (item === removeItem) {
-      myGroceryList.filter(item)
-      return myGroceryList
-    }
+function removeItem(myGroceryList, rmItem) {
+  if (myGroceryList && rmItem) {
+    myGroceryList.forEach(item => {
+    item === rmItem ? myGroceryList.splice(myGroceryList[item], 1) : null
+  })
+  return myGroceryList
+  } else {
+    return []
   }
 }
 
 function addItem(myGroceryList, addItem) {
-  myGroceryList.push(addItem)
+  if (myGroceryList && addItem) {
+    myGroceryList.push(addItem)
+    return myGroceryList
+  } else {
+    return []
+  }
 }
 ////////// PROBLEM 9 //////////
 
@@ -203,8 +210,10 @@ function addItem(myGroceryList, addItem) {
 //Code Here
 function maker() {
   let arr = []
-
-  
+  for (i = 1; i < 216; i++) {
+    arr.push(i)
+  }
+  return arr
 }
 
 
@@ -221,7 +230,9 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
 */
   
 //Code Here
-
+function addTen(numbers) {
+  return numbers.map(num => parseInt(num) + 10)
+}
 
 
 ////////// PROBLEM 11 //////////
@@ -299,7 +310,12 @@ var colt = {
 */
 
 //Code Here
+devMountainEmployees.push(joe)
+devMountainEmployees.push(cahlan)
+devMountainEmployees.push(ryan)
+devMountainEmployees.pop(colt)
 
+console.log(devMountainEmployees.length)
 
 
 /*
@@ -308,8 +324,13 @@ var colt = {
 */
 
 //Code Here
+// for (employee of devMountainEmployees) {
+//   employee.name === "Cahlan" ? 
+// }
 
-
+let filterTest = devMountainEmployees.filter((employee) => {
+  return employee.name !== "Cahlan"
+})
 
 ////////// PROBLEM 13 //////////
 
@@ -320,7 +341,7 @@ var colt = {
 */
 
 //Code Here
-
+let users = []
 
 
 /*
