@@ -257,7 +257,9 @@ for(var i = 0; i < num2; i++){
 */
 
 //Code Here
-
+function longer(arr1, arr2) {
+  return arr1.length > arr2.length ? arr1 : arr2
+}
 
 
 /*
@@ -269,7 +271,14 @@ for(var i = 0; i < num2; i++){
 */
 
 //Code Here
-
+function both(arr1, arr2) {
+  let arr = []
+  for (num1 of arr1) {
+    for (num2 of arr2)
+      num1 === num2 ? arr.push(num1) : null
+  }
+  return arr
+}
 
 
 ////////// PROBLEM 12 //////////
@@ -313,7 +322,7 @@ var colt = {
 devMountainEmployees.push(joe)
 devMountainEmployees.push(cahlan)
 devMountainEmployees.push(ryan)
-devMountainEmployees.pop(colt)
+devMountainEmployees.push(colt)
 
 console.log(devMountainEmployees.length)
 
@@ -328,9 +337,12 @@ console.log(devMountainEmployees.length)
 //   employee.name === "Cahlan" ? 
 // }
 
-let filterTest = devMountainEmployees.filter((employee) => {
-  return employee.name !== "Cahlan"
-})
+for (employee of devMountainEmployees) {
+  if (employee.name === "Cahlan") {
+    devMountainEmployees.splice(devMountainEmployees.indexOf(employee), 1)
+  }
+}
+
 
 ////////// PROBLEM 13 //////////
 
@@ -362,8 +374,21 @@ var user1 = {
 // Do not edit the code above.
 
 //Code Here
+var user2 = {
+  name: 'Nah Man',
+  email: 'ok@gmail.com',
+  password: 'hunter2',
+  username: 'ihazcode'
+};
 
+var user3 = {
+  name: 'Cool Dude',
+  email: 'myemail@email.com',
+  password: 'hunter2',
+  username: 'ihazcode'
+};
 
+users = [user1, user2, user3]
 
 /*
   Now you have a very common data structure. 
@@ -376,7 +401,11 @@ var user1 = {
 */
 
 //Code Here
-
+for (user of users) {
+  if (user.email === "mark.mciver@devmounta.in") {
+    users.splice(users[user], 1)
+  }
+}
 
 
 /*

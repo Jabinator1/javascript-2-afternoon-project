@@ -129,15 +129,17 @@ let methodCollection = {
 */
 
 //Code Here
-methodCollection.alertHello = alert("hello")
-methodCollection.logHello = console.log("hello")
+methodCollection.alertHello = function alertHello() { alert("hello") }
+methodCollection.logHello = function logHello() { console.log("hello")}
+
 /*
   Now call your alertHello and logHello methods.
 */
 
 //Code Here
-methodCollection.alertHello
-methodCollection.logHello
+methodCollection.alertHello()
+methodCollection.logHello()
+
 ////////// PROBLEM 6 //////////
 
 /*
@@ -162,6 +164,12 @@ let makePerson = (name, birthday, ssn) => {
 */
 
 //Code Here
-let makeCard = (cardNumer, expirationDate, securityCode) => {
+function makeCard(cardNumber, expirationDate, securityCode) {
+   var creditCard =  new Object()
+  
+   creditCard.cardNumber = cardNumber
+   creditCard.expirationDate = expirationDate
+   creditCard.securityCode = securityCode
 
+   return creditCard
 }
